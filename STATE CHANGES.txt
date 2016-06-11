@@ -1,2 +1,2 @@
 6th Nov. 2016: edited index.html to adjust the purpose of my usage.
-same date above: add a _profile.png file onto img folder.
+same date above: add a profilemine.png file onto img folder.
