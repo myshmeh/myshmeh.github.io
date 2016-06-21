@@ -1,4 +1,4 @@
 6th June 2016: modified index.html to adjust the purpose of my usage.
 same date above: add a profilemine.png, profilemine_fin.png, icon.png, and profilemine_fin2.png files onto img folder.
 22th June 2016: modified css/bootstrap.css, css/bootstrap_min.css, and css/freelancer.css to alter colors.
-same date above: modified index.html to edit text for 'About' section.
+same date above: modified index.html to edit text inside the <p> tag on 'About' section.
