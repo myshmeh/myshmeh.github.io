@@ -1,2 +1,3 @@
-6th Nov. 2016: edited index.html to adjust the purpose of my usage.
+6th June 2016: edited index.html to adjust the purpose of my usage.
 same date above: add a profilemine.png, profilemine_fin.png, icon.png, and profilemine_fin2.png files onto img folder.
+22th June 2016: edited index.html to alter colors.
