@@ -68,7 +68,7 @@ function Draw2(){
 	strokeWeight(2);
 	stroke(255);
 	var i;
-	for(i=0; i<360; i++){
+	for(i=0; i<360; i+=2){
 		xoff = sin(radians(i)) * sin(radians(i*val)) * 0.85;
 		noisedR = noise(xoff, yoff) * r;
 		x = cos(radians(i)) * noisedR; //cos(angle) == x / r -> x == cos(angle) * r
