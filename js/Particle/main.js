@@ -3,7 +3,10 @@ var t;
 var p, p2;
 function setup() {
   //init canvas
-  canvas = createCanvas(windowWidth, windowHeight*0.9);
+  var  h;
+  if(windowHeight > 750) h = 750;
+  else h = windowHeight
+  canvas = createCanvas(windowWidth, h*0.9);
 
   canvas.position(0, 0);
   canvas.parent("p5");
@@ -30,10 +33,10 @@ function Draw(){
 	//*--draw main
 	for(var i=0; i<8; i++){
 		var offset = i*4;
-		p.y = sin(radians(t+offset)) * sin(radians(t+offset) * 2) * sin(radians(t+offset) *2)* 300;
-		p.x = cos(radians(t+offset)) * cos(radians(t+offset) * 3) * cos(radians(t+offset) * 2) * 300;
-		p2.y = sin(radians(t+offset)) * sin(radians(t+offset) * 2) * sin(radians(t+offset) ) * 200;
-		p2.x = cos(radians(t+offset) * 3.5) * 200;
+		p.y = sin(radians(t+offset)) * sin(radians(t+offset) * 2) * sin(radians(t+offset) *2)* height*0.5;
+		p.x = cos(radians(t+offset)) * cos(radians(t+offset) * 3) * cos(radians(t+offset) * 2) * width*0.2;
+		p2.y = sin(radians(t+offset) * 3) * sin(radians(t+offset) * 2) * sin(radians(t+offset) ) * height*0.3;
+		p2.x = cos(radians(t+offset) * 1.6)  * width*0.2;
 		stroke(255);
 		strokeWeight(5);
 		point(p.x, p.y);
