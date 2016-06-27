@@ -11,11 +11,11 @@ function setup() {
   //init canvas
   var  h;
   if(windowHeight > 750) h = 750;
-  else h = windowHeight
+  else h = windowHeight;
   canvas = createCanvas(windowWidth, h*0.9);
 
   canvas.position(0, 0);
-  canvas.parent("p5");
+  canvas.parent("p5-sunshine");
   
   //init var
   t = 0;
