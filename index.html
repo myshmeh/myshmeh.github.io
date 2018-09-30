@@ -1,505 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>myshmeh | portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio page of myshmeh, programming hobbyist loving music.">
-    <meta name="author" content="myshmeh">
-    <meta name="keywords" content="C#, Java, Game Maker">
 
     <!-- google analytics -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-79202823-1', 'auto');
-      ga('send', 'pageview');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+        ga('create', 'UA-79202823-1', 'auto');
+        ga('send', 'pageview');
     </script>
 
-	<!-- javaScript -->
-	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
-    <!-- uncomment lines below to include extra p5 libraries -->
-    <script language="javascript" src="libraries/p5.dom.js"></script>
-    <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
-    <script language="javascript" type="text/javascript" src="js/Particle/particle.js"></script>
-	<script language="javascript" type="text/javascript" src="js/Particle/main.js"></script>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>myshmeh | Portfolio</title>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom Fonts -->
-    <link rel="icon" type="image/png" href="img/icon.png">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <!-- Custom Styles  -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body id="page-top" class="index">
-	<!-- javaScript: Sunshine Fx -->
-	<div id="p5-sunshine"></div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">myshmeh's portfolio</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+<body>
+    <!-- Header -->
+    <div id="navbar-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">myshmeh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Work</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+        </nav>
+    </div>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile_mine.gif" alt="">
-                    <div class="intro-text">
-                        <span class="name">myshmeh</span>
-                        <hr class="star-light">
-                        <span class="skills">Mere Coding Hobbyist Loving Music</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+    <!-- Main -->
+    <div id="showcase-wrapper" class="container">
+        <!-- Showcase - Game -->
+        <div id="showcase-game-wrapper" class="">
+            <h3 class="mt-5">Game</h3>
+            <!-- Showcase - Game - Main -->
+            <div id="showcase-game" class="row pt-3">
+                <div class="col-6 col-md-4 text-center">
+                    <div class="hovered-img-container">
+                        <img src="https://img.itch.zone/aW1hZ2UvNzM0MDYvMzM4Nzc2LnBuZw==/original/5%2Fzo6Q.png" alt="" class="img-fluid image">
+                        <div class="overlay">
+                            <div class="hovered-text">
+                                <p>Archaeologist Never Slept</p>
+                                <a target="_blank" class="btn btn-outline-light btn-sm" href="https://myshmeh.itch.io/archaeologist-never-slept">
+                                    Play
+                                </a>
                             </div>
                         </div>
-                        <img src="img/portfolio/ArchaeologistNeverSlept.png" class="img-responsive" alt="">
-                    </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                <div class="col-6 col-md-4 text-center">
+                    <div class="hovered-img-container">
+                        <img src="https://img.itch.zone/aW1hZ2UvMTA2MTYyLzQ5MjgzNi5wbmc=/347x500/Z3tYBY.png" alt="" class="img-fluid image">
+                        <div class="overlay">
+                            <div class="hovered-text">
+                                <p>IDO (I Dreamed Ocean)</p>
+                                <a target="_blank" class="btn btn-outline-light btn-sm" href="https://tsume-13.itch.io/ido">
+                                    Play
+                                </a>
                             </div>
                         </div>
-                        <img src="img/portfolio/jacket_modified.png" class="img-responsive" alt="">
-                    </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+        <!-- Showcase - App -->
+        <div id="showcase-privacy-wrapper" class="">
+            <h3 class="mt-5">App</h3>
+            <!-- Showcase - Privacy - Main -->
+            <div id="showcase-privacy" class="row pt-3">
+                <div class="col-6 col-md-4 text-center">
+                    <div class="hovered-img-container">
+                        <img src="img/popcon.png" alt="" class="img-fluid image">
+                        <div class="overlay">
+                            <div class="hovered-text">
+                                <p>POPCON - Scheduling app</p>
+                                <a target="_blank" class="btn btn-outline-light btn-sm" href="http://popcon.herokuapp.com/">
+                                    Visit
+                                </a>
                             </div>
                         </div>
-                        <img src="img/portfolio/maico.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/geishaScissors.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <!--
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-              -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Even though my major is not computer science, I like coding very much! I've interacted with C, Processing, HTML/CSS, little of JavaScript and PHP, and now I am mainly on C# for my self-educational purpose and GML in Game Maker Studio for game development.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>My another hobby is music! I like making songs in various genres. L'arc-en-Ciel (Japanese Legendary Rock Band!), Evanescence, Lacuna Coil, Apocalyptica, and Marilyn Manson are my favourites. If you're interested, you can listen to my music on this <a href="https://creofuga.net/23922">website</a>!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Contact</h3>
-                        <p>includek06enhavn(at)gmail.com</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Existence on Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://github.com/myshmeh" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://triangleyuki.itch.io/" class="btn-social btn-outline"><i class="fa fa-fw fa-gamepad"></i></a>
-                            </li>
-                            <li>
-                                <a href="http://www.tsu-me.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-chain"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Let Me Say</h3>
-                        <p>I am a member of Tsu-me, a community outputting your creativity.<br>Go check their <a href="http://www.tsu-me.com/">website</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        &copy; myshmeh 2016
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Archaeologist<br>Never Slept</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/ArchaeologistNeverSlept.png" class="img-responsive img-centered" alt="">
-							<p>There is an archaeologist who doesn't sleep.<br>Sometimes he naps, but he doesn't allow himself to dream.<br>The reason? His dream lies deep within the dungeon...</p>
-							<p>Watch <a href = "https://www.youtube.com/watch?v=Y5tiJjF-bTM">Timelapse</a></p>
-							<p><iframe frameborder="0" src="https://itch.io/embed/73406?bg_color=eec9c9&amp;fg_color=222222&amp;link_color=fa5c5c&amp;border_color=eec9c9" width="552" height="167"></iframe></p>
-
-
-                            <ul class="list-inline item-details">
-                                <li>Copyright:
-                                    <strong>myshmeh
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>June 27th 2016
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Game
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Inside Narrative</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/jacket_modified.png" class="img-responsive img-centered" alt="">
-                            <p>My First EP containing Memories, What He Saw, and Maternal Love?</p>
-							<iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://creofuga.net/audios/player?color=black&id=96050"></iframe>
-							<iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://creofuga.net/audios/player?color=black&id=74592"></iframe>
-							<iframe width="100%" height="120" scrolling="no" frameborder="no" src="https://creofuga.net/audios/player?color=black&id=74591"></iframe>
-                            <ul class="list-inline item-details">
-                                <li>Copyright:
-                                    <strong>Yuki Triangle
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>October 2015
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Music
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>GeishaPHP</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/maico.png" class="img-responsive" alt="">
-                            <p>Simply but Essentially functionized MVC framework.<br>GeishaPHP provides you a massive power to achieve MVC styled coding in PHP.<br>Download on <a href="https://github.com/myshmeh/GeishaPHP">Github</a></p>
-							<p>This logo is Illustrated by Tota Oyama</p>
-                            <ul class="list-inline item-details">
-                                <li>Copyright:
-                                    <strong>myshmeh
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>July 12th 2016
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Web Engineering
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Geisha Scissors</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/geishaScissors.png" class="img-responsive img-centered" alt="">
-                            <p>Simple PDF Split Program.<br><a href="https://github.com/myshmeh/Geisha-Scissors">Download on Github</a></p>
-                            <ul class="list-inline item-details">
-                                <li>Copyright:
-                                    <strong>myshmeh
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>September 2nd 2016
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Software
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-
+    <!-- Footer  -->
+    <div id="footer" class="mt-5 text-center">
+        <a target="_blank" href="https://twitter.com/@myshmeh" class="fa fa-twitter"></a>
+        <a target="_blank" href="https://github.com/myshmeh" class="fa fa-github"></a>
+    </div>
 </body>
-
 </html>
