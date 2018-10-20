@@ -1,1 +1,32 @@
+<html>
+  <head>
+    <script>
+      var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      };
 
+      function success(pos) {
+        var crd = pos.coords;
+        
+        alert('Your current position is:');
+        alert(`Latitude : ${crd.latitude}`);
+        alert(`Longitude: ${crd.longitude}`);
+        alert(`More or less ${crd.accuracy} meters.`);
+      }
+
+      function error(err) {
+        alert(`ERROR(${err.code}): ${err.message}`);
+      }
+
+      function getGeo(){
+        navigator.geolocation.getCurrentPosition(success, error, options);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hella</h1>
+    <button onclick="getGeo()">GEO!</button>
+  </body>
+</html>
