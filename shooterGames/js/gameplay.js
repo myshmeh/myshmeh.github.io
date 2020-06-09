@@ -103,7 +103,7 @@ class GamePlay extends Phaser.Scene {
         rect.setTint(0x222222);
         rect.alpha = 0;
         rect.setDepth(Z_INDEX_DEEP);
-        this.fadeIn(rect, 0, 4500, () => {
+        this.fadeIn(rect, 0, 3500, () => {
             this.scene.start('gameClear');
             this.music.stop();
         }, 1, 'Quart.easeIn');

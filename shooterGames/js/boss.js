@@ -54,11 +54,17 @@ class Boss extends Enemy {
     }
 
     spawnOption1() {
+        // set move coords
+        const radian = Math.random() * Math.PI;
+        this.option1Behaviour[0].args = {x: Math.cos(radian) * ENEMY_SPEED_FAST, y: Math.sin(radian) * ENEMY_SPEED_FAST};
         this.option1 = new BossOption(this.scene, this.x, this.y, this.addBullet, this.removeBullet, this.removeSelf, this.option1Behaviour);
         this.addEnemy(this.option1);
     }
 
     spawnOption2() {
+        // set move coords
+        const radian = Math.random() * Math.PI;
+        this.option2Behaviour[0].args = {x: Math.cos(radian) * ENEMY_SPEED_FAST, y: Math.sin(radian) * ENEMY_SPEED_FAST};
         this.option2 = new BossOption(this.scene, this.x, this.y, this.addBullet, this.removeBullet, this.removeSelf, this.option2Behaviour);
         this.addEnemy(this.option2);
     }

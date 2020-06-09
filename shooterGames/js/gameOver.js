@@ -18,7 +18,7 @@ class GameOver extends Phaser.Scene {
         rect.setTint(0x222222);
         this.fadeOut(rect, 0);
 
-        this.input.keyboard.on('keyup-' + GAME_OVER_RETRY_KEY, () => this.fadeIn(rect, 0, 2000, () => {window.location.reload(false)}));
+        this.input.keyboard.on('keyup-' + GAME_OVER_RETRY_KEY, () => this.fadeIn(rect, 0, 2000, () => {window.location.assign(`index.html?${REPLAY_PARAM_NAME}=1`)}));
 
         this.sound.play('themeSimple', {
             detune: 0,

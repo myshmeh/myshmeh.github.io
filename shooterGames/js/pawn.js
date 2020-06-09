@@ -6,6 +6,7 @@ class Pawn extends Enemy {
         super(scene, x, y, 'spaceships', 1, addBullet, removeBullet, removeSelf, behaviours);
         this.power = 1;
         this.vSpeed = 75;
+        this.health = PAWN_HEALTH_MAX;
     }
 
     launch() {

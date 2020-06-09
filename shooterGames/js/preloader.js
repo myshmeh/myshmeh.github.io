@@ -43,6 +43,9 @@ class Preloader extends Phaser.Scene {
             key: 'playerIdle',
             frames: [{key: 'spaceships', frame: 0}],
         });
-        this.scene.start('start');
+        const paramChunk = window.location.href.split('?')[1];
+        const paramNameVal = paramChunk?.split('=');
+        const sceneName = paramNameVal !== undefined && paramNameVal[0] === REPLAY_PARAM_NAME && paramNameVal[1] === '1' ? 'gameplay' : 'start';
+        this.scene.start(sceneName);
     }
 }

@@ -6,6 +6,7 @@ class Knight extends Enemy {
         super(scene, x, y, 'spaceships', 2, addBullet, removeBullet, removeSelf, behaviours);
         this.power = 1;
         this.speed = 75;
+        this.health = KNIGHT_HEALTH_MAX;
     }
 
     launch() {
