@@ -18,4 +18,6 @@ const config = {
     scene: [ Preloader, Menu, Stage1, Stage2, Stage3, Stage4, Stage5, Stage6, GameOver ]
 };
 
+console.log('before new phaser.game');
 const game = new Phaser.Game(config);
+console.log('after new phaser.game');
