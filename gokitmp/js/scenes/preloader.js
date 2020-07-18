@@ -1,3 +1,4 @@
+console.log('preload.js');
 class Preloader extends Phaser.Scene {
     fontLoaded;
     constructor() {
@@ -13,9 +14,10 @@ class Preloader extends Phaser.Scene {
             //     }]
             // }
         });
+        console.log('preloader constructed');
     }
 
-    preload() {
+    // preload() {
         // this.load.plugin('rexvirtualjoystickplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexvirtualjoystickplugin.min.js', true);
         // this.plugins.get('rexwebfontloaderplugin').addToScene(this);
         // const fontLoadConfig = {
@@ -38,9 +40,9 @@ class Preloader extends Phaser.Scene {
         // this.load.image('obstacle', 'img/obstacle.png');
         // this.load.spritesheet('player', 'img/MantisMove.png', { frameWidth: 32, frameHeight: 32 });
         // this.load.spritesheet('enemy', 'img/MaggotWalk.png', { frameWidth: 64, frameHeight: 64 });
-    }
+    // }
 
-    create() {
+    // create() {
         // this.anims.create({
         //     key: 'powdered_slime',
         //     frames: [{key: 'powdered_slime', frame: 0}],
@@ -48,6 +50,6 @@ class Preloader extends Phaser.Scene {
 
         // this.scene.start('menu');
         // this.scene.start('stage1', {items: {key: 1, powder: 1}});
-        console.log('scene.create.preloader');
-    }
+        // console.log('scene.create.preloader');
+    // }
 }
